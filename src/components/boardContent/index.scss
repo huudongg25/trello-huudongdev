@@ -1,0 +1,28 @@
+@import "../../settings.scss";
+
+.board-content {
+  display: flex;
+  margin: 0 $gap $gap;
+  overflow-x: auto;
+}
+.columns {
+  flex: 0 0 auto;
+  width: 300px;
+  height: calc(100% - ($gap));
+  &:not(:first-child) {
+    margin-left: $gap;
+  }
+
+  > * {
+    background-color: #fff;
+    padding: $spacing;
+  }
+}
+.header {
+}
+.cards {
+}
+.card-item {
+}
+.footer {
+}

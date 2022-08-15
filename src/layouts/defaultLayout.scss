@@ -1,0 +1,19 @@
+@import "../settings.scss";
+
+.wrapper {
+  height: 100vh;
+  background-color: $main-bg-color;
+  display: grid;
+  grid-template-rows: 4rem 5rem 1fr;
+}
+.nav {
+  color: $white-color;
+  background-color: $nav-bg-color;
+  padding: 0 $spacing;
+}
+.board {
+  padding: 0 $spacing;
+}
+.content {
+  padding: 0 $spacing;
+}
