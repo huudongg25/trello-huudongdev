@@ -1,0 +1,14 @@
+@import "../../_settings.scss";
+
+div.card-item {
+  cursor: pointer;
+  box-shadow: 0 5px 4px rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+  padding: $gap;
+  margin-bottom: $gap;
+  img.card-cover {
+    display: block;
+    width: calc(100% + 2 * #{$gap});
+    margin: -$gap 0 $gap (-$gap);
+  }
+}

@@ -1,0 +1,92 @@
+@import "../../_settings.scss";
+
+$header-col-height: 46px;
+$footer-col-height: 46px;
+
+$col-height: 600px;
+
+.columns {
+  flex: 0 0 auto;
+  width: 400px;
+  height: $col-height;
+  margin-right: 20px;
+
+  > * {
+    background-color: rgb(228, 228, 228);
+    padding: $spacing;
+  }
+}
+.header {
+  cursor: pointer;
+  font-size: $fontsize-title;
+  padding-left: 15px;
+  font-weight: bold;
+  line-height: $header-col-height;
+  display: flex;
+  align-items: center;
+  height: $header-col-height;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-item {
+  font-size: $fontsize-default;
+}
+.footer {
+  line-height: $footer-col-height;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: $fontsize-default;
+  height: $footer-col-height;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .footer-action {
+    color: #888;
+    user-select: none;
+    margin-left: $gap;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    & .icon {
+      margin-right: 3px;
+    }
+    &:hover {
+      color: $black-color;
+    }
+  }
+}
+
+div.cards {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 11px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($color: rgb(224, 224, 224), $amount: 15);
+    border-right: 5px solid rgb(224, 224, 224);
+  }
+  margin: 0;
+  height: calc(#{$col-height} - #{$header-col-height} - #{$footer-col-height});
+
+  .card-ghost {
+    transition: transform 0.18s ease;
+    transform: rotateZ(5deg);
+    font-weight: bold;
+  }
+
+  .card-ghost-drop {
+    transition: transform 0.18s ease-in-out;
+    transform: rotateZ(0deg);
+    font-weight: bold;
+  }
+
+  .drop-preview {
+    background-color: rgba(150, 150, 200, 0.1);
+    border: 1px dashed #abc;
+    margin: 5px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../_settings.scss";
+
+.board-bar {
+  margin-top: $appBar-height;
+  font-size: 1.6rem;
+  height: $boardBar-height;
+  display: flex;
+  align-items: center;
+}

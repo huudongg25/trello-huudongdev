@@ -1,14 +1,10 @@
-@import "../settings.scss";
+@import "../_settings.scss";
 
 .wrapper {
   height: 100vh;
-  background-color: $main-bg-color;
-  display: grid;
-  grid-template-rows: 4rem 5rem 1fr;
+  background: linear-gradient(to right, #8b4ce9, #c445a0);
 }
 .nav {
-  color: $white-color;
-  background-color: $nav-bg-color;
   padding: 0 $spacing;
 }
 .board {

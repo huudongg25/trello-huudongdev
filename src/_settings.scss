@@ -1,11 +1,17 @@
 $gap: 1rem;
 $spacing: 2rem;
-$fontsize-default: 1.6rem;
+$fontsize-title: 2.5rem;
+$fontsize-default: 2rem;
+$fontsize-desc: 1.8rem;
 $border-radius: 2rem;
+
+$appBar-height: 5vh;
+$boardBar-height: 7vh;
+$boardContent-height: 85vh;
 
 //color
 $main-bg-color: #ede9ff;
-$nav-bg-color: #026aa7;
+$nav-bg-color: #04669e;
 $white-color: #fff;
 $black-color: #333;
 $sub-bg-color: #3487b8;

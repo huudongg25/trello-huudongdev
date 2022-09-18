@@ -1,28 +1,52 @@
-@import "../../settings.scss";
+@import "../../_settings.scss";
+
+$header-col-height: 46px;
+$footer-col-height: 46px;
 
 .board-content {
-  display: flex;
-  margin: 0 $gap $gap;
+  height: $boardContent-height;
+  margin-top: 10px;
   overflow-x: auto;
-}
-.columns {
-  flex: 0 0 auto;
-  width: 300px;
-  height: calc(100% - ($gap));
-  &:not(:first-child) {
-    margin-left: $gap;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: 15px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($color: rgb(224, 224, 224), $amount: 15);
+    border-radius: 10px;
   }
 
-  > * {
-    background-color: #fff;
-    padding: $spacing;
+  .col-drop-preview {
+    background-color: rgba(150, 150, 200, 0.1);
+    border: 1px dashed #abc;
+    margin: 5px 45px 5px 5px;
   }
-}
-.header {
-}
-.cards {
-}
-.card-item {
-}
-.footer {
+
+  .add-new-col {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    width: 250px;
+    padding: 4px 0 4px 15px;
+    cursor: pointer;
+    color: rgb(233, 233, 233);
+    margin-left: $gap;
+    font-size: 15px;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 0 5px 4px rgba($color: #5c5b5b, $alpha: 0.1);
+    transition: 0.2s;
+    &:hover {
+      color: #fff;
+      background-color: hsla(0, 0%, 100%, 0.18);
+    }
+    & .icon {
+      font-size: 15px;
+      margin-right: 4px;
+    }
+  }
 }
